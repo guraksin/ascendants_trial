@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://c6lkx2aasjf87"]
+
+[ext_resource type="PackedScene" uid="uid://4yqjutbiryqm" path="res://System/Room.tscn" id="1_8sf7r"]
+[ext_resource type="Script" uid="uid://cssl3jdnm01cl" path="res://System/Game/RoomOpening.gd" id="2_x110o"]
+[ext_resource type="PackedScene" uid="uid://bejpvsyoahd5d" path="res://System/Player.tscn" id="3_fpprj"]
+[ext_resource type="PackedScene" uid="uid://cfp0vih8jt0b2" path="res://System/Interactable.tscn" id="4_m53fj"]
+[ext_resource type="Texture2D" uid="uid://bk5a8x0i6xdf7" path="res://Assets/Save-Point/Otomat3.png" id="5_5tiye"]
+[ext_resource type="Texture2D" uid="uid://dn0f0eu0yprq3" path="res://Assets/Save-Point/Otomat2.png" id="6_0gw8b"]
+[ext_resource type="Texture2D" uid="uid://b0xyhrwkd6eg0" path="res://Assets/Save-Point/Otomat4.png" id="7_ri17m"]
+[ext_resource type="Texture2D" uid="uid://6n5f4jvwtr15" path="res://Assets/Save-Point/Otomat1.png" id="8_x1qbf"]
+[ext_resource type="Resource" uid="uid://tn7k05e2sgf0" path="res://Assets/Save-Point/Vending_Machine.dialogue" id="9_yqljp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wjx6l"]
+shading_mode = 0
+albedo_color = Color(0.36862746, 0.22745098, 0.015686275, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k3bhl"]
+shading_mode = 0
+albedo_color = Color(0, 0.27450982, 0.28235295, 1)
+
+[sub_resource type="Resource" id="Resource_kalno"]
+script = ExtResource("2_x110o")
+wall = 3
+width = 3.0
+has_door = false
+id = "GreatHallR1"
+target_scene = "uid://dexgmd1h1vm86"
+target_id = "GreatHallR2"
+metadata/_custom_type_script = "uid://cssl3jdnm01cl"
+
+[sub_resource type="Resource" id="Resource_12683"]
+script = ExtResource("2_x110o")
+wall = 0
+offset = -3.0
+has_door = false
+id = "R_CorridorD1"
+metadata/_custom_type_script = "uid://cssl3jdnm01cl"
+
+[sub_resource type="Resource" id="Resource_wjx6l"]
+script = ExtResource("2_x110o")
+wall = 0
+offset = 5.0
+has_door = false
+id = "R_CorridorD2"
+target_scene = "uid://cya442bcjma7h"
+target_id = "Cafe1"
+metadata/_custom_type_script = "uid://cssl3jdnm01cl"
+
+[node name="Node3D" type="Node3D" unique_id=982911495]
+
+[node name="Room" parent="." unique_id=1257424196 instance=ExtResource("1_8sf7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.003902793, 0, -0.025510311)
+room_width = 14.0
+room_depth = 4.5
+floor_material = SubResource("StandardMaterial3D_wjx6l")
+wall_material = SubResource("StandardMaterial3D_k3bhl")
+openings = Array[ExtResource("2_x110o")]([SubResource("Resource_kalno"), SubResource("Resource_12683"), SubResource("Resource_wjx6l")])
+frame_color = Color(0, 0.050980393, 0.1764706, 1)
+
+[node name="Player" parent="." unique_id=1022299477 instance=ExtResource("3_fpprj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3496447, -0.2623768, 1.7610319)
+
+[node name="StaticBody3D" parent="." unique_id=662459298 instance=ExtResource("4_m53fj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9488376, 0.3388307, 2.1078959)
+object_name = "Vending Machine"
+texture = ExtResource("5_5tiye")
+right_texture = ExtResource("6_0gw8b")
+left_texture = ExtResource("7_ri17m")
+back_texture = ExtResource("8_x1qbf")
+footprint = Vector2(1.59, 0.515)
+dialogue = ExtResource("9_yqljp")

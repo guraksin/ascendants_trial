@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://bi352xitulkr6"]
+
+[ext_resource type="PackedScene" uid="uid://4yqjutbiryqm" path="res://System/Room.tscn" id="1_q6mtw"]
+[ext_resource type="Script" uid="uid://cssl3jdnm01cl" path="res://System/Game/RoomOpening.gd" id="2_brdw2"]
+[ext_resource type="PackedScene" uid="uid://bejpvsyoahd5d" path="res://System/Player.tscn" id="3_gvdhc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eim75"]
+shading_mode = 0
+albedo_color = Color(0.36862746, 0.22745098, 0.015686275, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k3bhl"]
+shading_mode = 0
+albedo_color = Color(0, 0.27450982, 0.28235295, 1)
+
+[sub_resource type="Resource" id="Resource_1pjc5"]
+script = ExtResource("2_brdw2")
+wall = 1
+width = 3.0
+has_door = false
+id = "GreatHallL1"
+target_scene = "uid://dexgmd1h1vm86"
+target_id = "GreatHallL2"
+metadata/_custom_type_script = "uid://cssl3jdnm01cl"
+
+[sub_resource type="Resource" id="Resource_k3bhl"]
+script = ExtResource("2_brdw2")
+wall = 0
+offset = -5.0
+metadata/_custom_type_script = "uid://cssl3jdnm01cl"
+
+[sub_resource type="Resource" id="Resource_fxk8y"]
+script = ExtResource("2_brdw2")
+wall = 0
+offset = 5.0
+metadata/_custom_type_script = "uid://cssl3jdnm01cl"
+
+[sub_resource type="Resource" id="Resource_tf7wx"]
+script = ExtResource("2_brdw2")
+wall = 0
+metadata/_custom_type_script = "uid://cssl3jdnm01cl"
+
+[node name="Node3D" type="Node3D" unique_id=876420816]
+
+[node name="Room" parent="." unique_id=1257424196 instance=ExtResource("1_q6mtw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0012221336, 0, -0.055369854)
+room_width = 14.0
+room_depth = 4.5
+floor_material = SubResource("StandardMaterial3D_eim75")
+wall_material = SubResource("StandardMaterial3D_k3bhl")
+openings = Array[ExtResource("2_brdw2")]([SubResource("Resource_1pjc5"), SubResource("Resource_k3bhl"), SubResource("Resource_fxk8y"), SubResource("Resource_tf7wx")])
+frame_color = Color(0, 0.050980393, 0.1764706, 1)
+
+[node name="Player" parent="." unique_id=1022299477 instance=ExtResource("3_gvdhc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.30806297, 0, 0.01783371)

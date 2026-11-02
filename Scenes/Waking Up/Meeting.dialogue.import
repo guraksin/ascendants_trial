@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://ck487xh5jkea7"
+path="res://.godot/imported/Meeting.dialogue-cff20368b0ba00f61b809130937f5a6e.tres"
+
+[deps]
+
+source_file="res://Scenes/Waking Up/Meeting.dialogue"
+dest_files=["res://.godot/imported/Meeting.dialogue-cff20368b0ba00f61b809130937f5a6e.tres"]
+
+[params]
+
+defaults=true

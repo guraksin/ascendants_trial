@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bwibcvdhhrem"]
+
+[ext_resource type="Script" uid="uid://7n3w7wcwn28m" path="res://System/Game/BoxProp.gd" id="1_73lk3"]
+
+[node name="BoxProp" type="StaticBody3D" unique_id=1960226897]
+script = ExtResource("1_73lk3")

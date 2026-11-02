@@ -1,0 +1,215 @@
+[gd_scene format=3 uid="uid://b43c26egxqr6g"]
+
+[ext_resource type="Script" uid="uid://dqwdnk1y51upi" path="res://System/Terminal/Terminal.gd" id="1_n4ygp"]
+[ext_resource type="Script" uid="uid://wl8hoalcqwim" path="res://System/Terminal/characters_tab.gd" id="2_t21dc"]
+[ext_resource type="Script" uid="uid://dmpg1g0frjkbj" path="res://System/Terminal/rules_tab.gd" id="3_vxqoe"]
+[ext_resource type="Script" uid="uid://blccklf6ilvkl" path="res://System/Terminal/settings_tab.gd" id="4_af3ac"]
+[ext_resource type="Script" uid="uid://bb3tk3togtrwg" path="res://System/Terminal/save_tab.gd" id="5_aiwva"]
+
+[node name="Terminal" type="CanvasLayer" unique_id=2102906956]
+process_mode = 3
+layer = 200
+script = ExtResource("1_n4ygp")
+
+[node name="Panel" type="PanelContainer" parent="." unique_id=507781630]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 63.0
+offset_top = 56.0
+offset_right = -64.0
+offset_bottom = -55.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=2081037601]
+layout_mode = 2
+
+[node name="TabButtons" type="HBoxContainer" parent="Panel/VBoxContainer" unique_id=102272047]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Characters" type="Button" parent="Panel/VBoxContainer/TabButtons" unique_id=1761359159]
+layout_mode = 2
+focus_mode = 0
+toggle_mode = true
+text = "Characters"
+
+[node name="Terms and Rules" type="Button" parent="Panel/VBoxContainer/TabButtons" unique_id=586184161]
+layout_mode = 2
+focus_mode = 0
+toggle_mode = true
+text = "Terms & Rules"
+
+[node name="Settings" type="Button" parent="Panel/VBoxContainer/TabButtons" unique_id=963915158]
+layout_mode = 2
+focus_mode = 0
+toggle_mode = true
+text = "Terminal Settings"
+
+[node name="SaveTabButton" type="Button" parent="Panel/VBoxContainer/TabButtons" unique_id=744727333]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 0
+toggle_mode = true
+text = "Trashcan"
+
+[node name="Pages" type="Control" parent="Panel/VBoxContainer" unique_id=1775565180]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Characters" type="Control" parent="Panel/VBoxContainer/Pages" unique_id=114056025]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_t21dc")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer/Pages/Characters" unique_id=872853948]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="IconsLeft" type="VBoxContainer" parent="Panel/VBoxContainer/Pages/Characters/HBoxContainer" unique_id=1070345494]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Center" type="HBoxContainer" parent="Panel/VBoxContainer/Pages/Characters/HBoxContainer" unique_id=610971966]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Picture" type="TextureRect" parent="Panel/VBoxContainer/Pages/Characters/HBoxContainer/Center" unique_id=1466392942]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Detail" type="RichTextLabel" parent="Panel/VBoxContainer/Pages/Characters/HBoxContainer/Center" unique_id=766264869]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+
+[node name="IconsRight" type="VBoxContainer" parent="Panel/VBoxContainer/Pages/Characters/HBoxContainer" unique_id=366983562]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Terms and Rules" type="Control" parent="Panel/VBoxContainer/Pages" unique_id=1074560757]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_vxqoe")
+
+[node name="RulesText" type="RichTextLabel" parent="Panel/VBoxContainer/Pages/Terms and Rules" unique_id=1577091146]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+
+[node name="Settings" type="Control" parent="Panel/VBoxContainer/Pages" unique_id=1205503838]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_af3ac")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/Pages/Settings" unique_id=974008669]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer/Pages/Settings/VBoxContainer" unique_id=613268333]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Pages/Settings/VBoxContainer/HBoxContainer" unique_id=1829523759]
+layout_mode = 2
+text = "Volume"
+
+[node name="VolumeSlider" type="HSlider" parent="Panel/VBoxContainer/Pages/Settings/VBoxContainer/HBoxContainer" unique_id=283564470]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.05
+
+[node name="FullscreenCheck" type="CheckButton" parent="Panel/VBoxContainer/Pages/Settings/VBoxContainer" unique_id=659899100]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="SaveTab" type="Control" parent="Panel/VBoxContainer/Pages" unique_id=2142232708]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_aiwva")
+main_menu_scene = "uid://4yi2sxc8j404"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/Pages/SaveTab" unique_id=447094630]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NotebookButton" type="Button" parent="Panel/VBoxContainer/Pages/SaveTab/VBoxContainer" unique_id=264727568]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Save"
+
+[node name="Slots" type="VBoxContainer" parent="Panel/VBoxContainer/Pages/SaveTab/VBoxContainer" unique_id=1436348608]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="TrashButton" type="Button" parent="Panel/VBoxContainer/Pages/SaveTab/VBoxContainer" unique_id=1041875416]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Return to Main Menu"
+
+[node name="Confirm" type="VBoxContainer" parent="Panel/VBoxContainer/Pages/SaveTab/VBoxContainer" unique_id=2122162664]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Pages/SaveTab/VBoxContainer/Confirm" unique_id=425469732]
+layout_mode = 2
+text = "The unsaved notes will be lost. Continue?"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer/Pages/SaveTab/VBoxContainer/Confirm" unique_id=2039556733]
+layout_mode = 2
+
+[node name="ConfirmYes" type="Button" parent="Panel/VBoxContainer/Pages/SaveTab/VBoxContainer/Confirm/HBoxContainer" unique_id=443548067]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Yes"
+
+[node name="ConfirmNo" type="Button" parent="Panel/VBoxContainer/Pages/SaveTab/VBoxContainer/Confirm/HBoxContainer" unique_id=864321258]
+unique_name_in_owner = true
+layout_mode = 2
+text = "No"
+
+[node name="Status" type="Label" parent="Panel/VBoxContainer/Pages/SaveTab/VBoxContainer" unique_id=1716230918]
+unique_name_in_owner = true
+layout_mode = 2

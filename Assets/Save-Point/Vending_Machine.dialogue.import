@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://tn7k05e2sgf0"
+path="res://.godot/imported/Vending_Machine.dialogue-c384544648345a41aa8e07f79d6fedb0.tres"
+
+[deps]
+
+source_file="res://Assets/Save-Point/Vending_Machine.dialogue"
+dest_files=["res://.godot/imported/Vending_Machine.dialogue-c384544648345a41aa8e07f79d6fedb0.tres"]
+
+[params]
+
+defaults=true

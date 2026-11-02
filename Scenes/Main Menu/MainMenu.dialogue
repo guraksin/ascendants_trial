@@ -1,0 +1,36 @@
+~ start
+Plush: Woah, such a wonderful day to exist in a killing game!
+=> menu
+
+~ menu
+Plush: So? Where are you hopping today?
+- Start a New Session (C Version)
+	Plush: Off you go, then. Try not to die too early.
+	do start_game()
+- Start a Brand New Session (A Version)
+	Plush: ... if you say so.
+	do start_a_version()
+- Load an Ongoing Session
+	if SaveSystem.has_any()
+		Plush: Oooh! So you left some notes behind... which page?
+		- Slot 1: {{SaveSystem.describe(1)}} [if SaveSystem.has_slot(1) /]
+			do load_game(1)
+		- Slot 2: {{SaveSystem.describe(2)}} [if SaveSystem.has_slot(2) /]
+			do load_game(2)
+		- Slot 3: {{SaveSystem.describe(3)}} [if SaveSystem.has_slot(3) /]
+			do load_game(3)
+	else
+		Plush: Hmm, it seems you haven't left anything to come back to.
+		=> menu
+- Session Participants
+	Plush: It seems there is no one you know. Aww, you're all alone, aren'tcha? Well, worry not! Start a session and you'll find a plenty of company! One way or another...
+	=> menu
+- Session Settings
+	Plush: We're hard at work, bud. With blood, [wave]sweet[/wave] and tears! Anyways, come back later.
+	=> menu
+- Quit Session
+	Plush: [wave]Cya~[wave] [next=auto]
+	do quit_game()
+- Never Mind
+	Plush: Suit Yourself, mhehe.
+	=> END

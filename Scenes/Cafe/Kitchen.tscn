@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://dhaabor1ps74d"]
+
+[ext_resource type="PackedScene" uid="uid://4yqjutbiryqm" path="res://System/Room.tscn" id="1_t2sl4"]
+[ext_resource type="Script" uid="uid://cssl3jdnm01cl" path="res://System/Game/RoomOpening.gd" id="2_pbq7o"]
+[ext_resource type="PackedScene" uid="uid://bejpvsyoahd5d" path="res://System/Player.tscn" id="3_uxyhd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h87hw"]
+shading_mode = 0
+albedo_color = Color(0.5370987, 0.5370987, 0.5370987, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qt8ew"]
+shading_mode = 0
+albedo_color = Color(0, 0.5117663, 0.48699552, 1)
+
+[sub_resource type="Resource" id="Resource_2kfh8"]
+script = ExtResource("2_pbq7o")
+wall = 3
+has_door = false
+id = "Cafe2"
+target_scene = "uid://cya442bcjma7h"
+target_id = "Kitchen1"
+metadata/_custom_type_script = "uid://cssl3jdnm01cl"
+
+[node name="Node3D" type="Node3D" unique_id=1036962492]
+
+[node name="Room" parent="." unique_id=1257424196 instance=ExtResource("1_t2sl4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04246366, -1.1920929e-07, -0.027725935)
+room_width = 4.6
+floor_material = SubResource("StandardMaterial3D_h87hw")
+wall_material = SubResource("StandardMaterial3D_qt8ew")
+openings = Array[ExtResource("2_pbq7o")]([SubResource("Resource_2kfh8")])
+stub_shadow = null
+arrival_gap = null
+
+[node name="Player" parent="." unique_id=1022299477 instance=ExtResource("3_uxyhd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.125357, -0.015641272, 1.9351952)

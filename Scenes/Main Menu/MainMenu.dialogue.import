@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://cc76qbik5vy8c"
+path="res://.godot/imported/MainMenu.dialogue-b37864f1267864b12ac231557594de24.tres"
+
+[deps]
+
+source_file="res://Scenes/Main Menu/MainMenu.dialogue"
+dest_files=["res://.godot/imported/MainMenu.dialogue-b37864f1267864b12ac231557594de24.tres"]
+
+[params]
+
+defaults=true

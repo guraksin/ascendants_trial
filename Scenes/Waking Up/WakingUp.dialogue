@@ -1,0 +1,28 @@
+~ start
+Naran: Oh god! Chuu, are you okay!? Wake up!!
+do show_cg("tavan")
+do GameState.learn("Chu-Jae", "name")
+do GameState.learn("Chu-Jae", "birth_year")
+do GameState.learn("Chu-Jae", "region")
+do GameState.learn("Chu-Jae", "bio")
+Chu-Jae: [speed=0.2] Hmnh... wha?
+Naran: Geez... Chuu! I thought you were dead! Can you imagine how terrified I was? Why didn't you wake up sooner!?
+Chu-Jae: (What's happening? Who is this girl? W-where am I? I-Is she calling me "Chuu"?)
+Naran: Chuu... are you even listening? D-don't you care about me...?
+Chu-Jae: (Oh, right... I do know why I'm here... yet... what's that smell? Ugh—) [next=auto]
+do show_cg("corpse")
+do wait(1.5)
+Chu-Jae: ... (Is that?)
+Naran: Heyy... Chuu, are you okay? Look at me...
+Chu-Jae: Ugh... (There's no blood. He's probably just sleeping... I hate my imagination—) [next=auto]
+System: Biological casualty confirmed. Witness threshold reached. \nLocation: Cafeteria Storage Facility. \nCase File dispatch pending completion.
+do GameState.learn_rule("witness_threshold")
+do show_cg("tavan")
+Naran: W-what? Was that an dead body report? Chuu! Are you alive!? Hey!!?
+Chu-Jae: ...I'm okay.
+Naran: A-are you? Oh... I'm relieved. But then... what was that report all about— [next=auto]
+Pietro: Well well well, what a lovey dovey date you two having?
+Naran: !?
+do GameState.learn("Naran", "name")
+do debug(GameState.to_dict())
+=> END

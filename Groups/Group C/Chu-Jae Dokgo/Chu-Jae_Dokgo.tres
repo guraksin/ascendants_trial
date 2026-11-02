@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://dcqd66e8mkf5w"]
+
+[ext_resource type="Script" uid="uid://gdhsu8jdug1x" path="res://System/Character/CharacterData.gd" id="1_j8tkh"]
+
+[resource]
+resource_name = "Chu-Jae"
+script = ExtResource("1_j8tkh")
+display_name = "Dokgo Chu-Jae"
+bio = "Adult, Male, Human. Height is 172cm.
+He was so close to becoming a succsesful lawyer when an early marriage changed his path completely. He never saw it as a loss anyway."
+birth_year = 1901
+region = "Great Korea"
+metadata/_custom_type_script = "uid://gdhsu8jdug1x"

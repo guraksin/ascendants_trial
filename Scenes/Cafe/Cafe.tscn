@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://cya442bcjma7h"]
+
+[ext_resource type="PackedScene" uid="uid://4yqjutbiryqm" path="res://System/Room.tscn" id="1_uch60"]
+[ext_resource type="Script" uid="uid://cssl3jdnm01cl" path="res://System/Game/RoomOpening.gd" id="2_6kn2k"]
+[ext_resource type="PackedScene" uid="uid://cfp0vih8jt0b2" path="res://System/Interactable.tscn" id="3_j2lxn"]
+[ext_resource type="Texture2D" uid="uid://das68qxob7kgn" path="res://Assets/Familiar-Trash-Can/Trashcan.png" id="4_ojfkk"]
+[ext_resource type="Resource" uid="uid://in68xtcp55so" path="res://Assets/Familiar-Trash-Can/TrashCan.dialogue" id="5_gplhi"]
+[ext_resource type="PackedScene" uid="uid://bejpvsyoahd5d" path="res://System/Player.tscn" id="6_3ily6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h87hw"]
+shading_mode = 0
+albedo_color = Color(0.63512164, 0.49935377, 0.20663145, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k3xsx"]
+shading_mode = 0
+albedo_color = Color(0.3140802, 0.17446715, 0.003360537, 1)
+
+[sub_resource type="Resource" id="Resource_qt8ew"]
+script = ExtResource("2_6kn2k")
+wall = 1
+offset = 1.0
+has_door = false
+id = "Kitchen1"
+target_scene = "uid://dhaabor1ps74d"
+target_id = "Cafe2"
+metadata/_custom_type_script = "uid://cssl3jdnm01cl"
+
+[sub_resource type="Resource" id="Resource_kiniw"]
+script = ExtResource("2_6kn2k")
+offset = 2.7
+id = "Cafe1"
+target_scene = "uid://c6lkx2aasjf87"
+target_id = "R_CorridorD2"
+metadata/_custom_type_script = "uid://cssl3jdnm01cl"
+
+[node name="Node3D" type="Node3D" unique_id=223504787]
+
+[node name="Room" parent="." unique_id=1257424196 instance=ExtResource("1_uch60")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009188294, 0, -0.09428072)
+room_width = 9.0
+room_depth = 5.5
+wall_height = 2.5
+floor_material = SubResource("StandardMaterial3D_h87hw")
+wall_material = SubResource("StandardMaterial3D_k3xsx")
+openings = Array[ExtResource("2_6kn2k")]([SubResource("Resource_qt8ew"), SubResource("Resource_kiniw")])
+frame_color = Color(0.13791639, 0.07195642, 0.001131199, 1)
+
+[node name="TrashCan" parent="." unique_id=662459298 instance=ExtResource("3_j2lxn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0899367, 0.22568774, 2.1514535)
+object_name = "Green Trash Can"
+texture = ExtResource("4_ojfkk")
+footprint = Vector2(0.6, 0.5)
+dialogue = ExtResource("5_gplhi")
+
+[node name="Player" parent="." unique_id=1022299477 instance=ExtResource("6_3ily6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0140526295, 0, -0.011086434)

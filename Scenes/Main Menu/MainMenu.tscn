@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://4yi2sxc8j404"]
+
+[ext_resource type="Script" uid="uid://5hr4nfwjtk07" path="res://Scenes/Main Menu/main_menu.gd" id="1_icfkg"]
+[ext_resource type="Texture2D" uid="uid://bjjpqiojrelcv" path="res://Scenes/Main Menu/Plush.png" id="1_wp7ex"]
+[ext_resource type="Resource" uid="uid://cc76qbik5vy8c" path="res://Scenes/Main Menu/MainMenu.dialogue" id="2_rgre6"]
+[ext_resource type="PackedScene" uid="uid://clicl7v8f28nd" path="res://Scenes/Main Menu/menu_balloon.tscn" id="3_7x5ku"]
+
+[node name="Control" type="Control" unique_id=2100487039]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_icfkg")
+dialogue = ExtResource("2_rgre6")
+balloon_scene = ExtResource("3_7x5ku")
+first_scene = "uid://cxelg1txc335l"
+a_version_scene = "uid://cya442bcjma7h"
+
+[node name="Plush" type="TextureButton" parent="." unique_id=2141422066]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -246.5
+offset_top = -556.0
+offset_right = 246.5
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("1_wp7ex")
+
+[node name="Menu" type="VBoxContainer" parent="." unique_id=1895411032]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 1.0
+offset_right = 426.0
+offset_bottom = 588.0
+
+[node name="Title" type="Label" parent="Menu" unique_id=164953102]
+layout_mode = 2
+text = "Ascendant's Trial"

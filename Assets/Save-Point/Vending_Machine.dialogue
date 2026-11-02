@@ -1,0 +1,13 @@
+~ start
+Aw... such a lonely and dusty vending machine.
+You hope somebody will save that vending machine. One day...
+One day you won’t just hope, you’ll do it your own! ...You hope.
+- Today is the day!
+	do SaveMenu.open()
+	if SaveMenu.saved
+		(Done! Ehehe, the vending machine looks less lonely now.)
+	else
+		(W-We need some preparation first? Right...)
+- It's not the right time
+	I-Is it?
+=> END

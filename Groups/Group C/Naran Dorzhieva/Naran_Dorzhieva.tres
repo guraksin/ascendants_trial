@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://clutpvivmtuex"]
+
+[ext_resource type="Script" uid="uid://gdhsu8jdug1x" path="res://System/Character/CharacterData.gd" id="1_kxhve"]
+
+[resource]
+resource_name = "Naran"
+script = ExtResource("1_kxhve")
+display_name = "Naran Dorzhieva"
+bio = "Adult, Female, Human. Height is 168cm.
+She spent her youth under Chinese imperial dominance, experiencing the final years of centuries-old foreign rule. In her late teens, she witessed the chaos of the 1921 revolution, transitioning into an era of hard-fought national independence. However, this sovereignty was short-lived; by her twenties, her own homeland became a communist state tightly bound to the Soviet Union. Nobody can never knew the power of twist more than her."
+birth_year = 1902
+region = "Mongolia"
+metadata/_custom_type_script = "uid://gdhsu8jdug1x"

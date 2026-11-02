@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://dexgmd1h1vm86"]
+
+[ext_resource type="PackedScene" uid="uid://4yqjutbiryqm" path="res://System/Room.tscn" id="1_2hyll"]
+[ext_resource type="Script" uid="uid://cssl3jdnm01cl" path="res://System/Game/RoomOpening.gd" id="2_j33v7"]
+[ext_resource type="PackedScene" uid="uid://bejpvsyoahd5d" path="res://System/Player.tscn" id="3_6w64n"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b0uk5"]
+shading_mode = 0
+albedo_color = Color(0.36862746, 0.22745098, 0.015686275, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_65rn2"]
+shading_mode = 0
+albedo_color = Color(0, 0.27450982, 0.28235295, 1)
+
+[sub_resource type="Resource" id="Resource_65rn2"]
+script = ExtResource("2_j33v7")
+wall = 1
+width = 3.0
+id = "GreatHallR2"
+target_scene = "uid://c6lkx2aasjf87"
+target_id = "GreatHallR1"
+metadata/_custom_type_script = "uid://cssl3jdnm01cl"
+
+[sub_resource type="Resource" id="Resource_nkhrm"]
+script = ExtResource("2_j33v7")
+wall = 3
+width = 3.0
+id = "GreatHallL2"
+target_scene = "uid://bi352xitulkr6"
+target_id = "GreatHallL1"
+metadata/_custom_type_script = "uid://cssl3jdnm01cl"
+
+[sub_resource type="Resource" id="Resource_b0uk5"]
+script = ExtResource("2_j33v7")
+width = 3.0
+target_scene = "uid://hl8rooipcwg"
+target_id = "GreatHall1"
+metadata/_custom_type_script = "uid://cssl3jdnm01cl"
+
+[sub_resource type="Resource" id="Resource_m1hkm"]
+script = ExtResource("2_j33v7")
+wall = 0
+offset = -2.9
+metadata/_custom_type_script = "uid://cssl3jdnm01cl"
+
+[sub_resource type="Resource" id="Resource_bnafl"]
+script = ExtResource("2_j33v7")
+wall = 0
+offset = 2.9
+metadata/_custom_type_script = "uid://cssl3jdnm01cl"
+
+[node name="Node3D" type="Node3D" unique_id=1083742925]
+
+[node name="Room" parent="." unique_id=1257424196 instance=ExtResource("1_2hyll")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.020587444, -1.1920929e-07, 0.00039815903)
+room_width = 11.5
+room_depth = 4.5
+floor_material = SubResource("StandardMaterial3D_b0uk5")
+wall_material = SubResource("StandardMaterial3D_65rn2")
+openings = Array[ExtResource("2_j33v7")]([SubResource("Resource_65rn2"), SubResource("Resource_nkhrm"), SubResource("Resource_b0uk5"), SubResource("Resource_m1hkm"), SubResource("Resource_bnafl")])
+frame_color = Color(0, 0.050980393, 0.1764706, 1)
+
+[node name="Player" parent="." unique_id=1022299477 instance=ExtResource("3_6w64n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0680908, -0.001429081, 0.997282)
+speed = 2.7

@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://hl8rooipcwg"]
+
+[ext_resource type="PackedScene" uid="uid://4yqjutbiryqm" path="res://System/Room.tscn" id="1_we05l"]
+[ext_resource type="Script" uid="uid://cssl3jdnm01cl" path="res://System/Game/RoomOpening.gd" id="2_ud36n"]
+[ext_resource type="PackedScene" uid="uid://bejpvsyoahd5d" path="res://System/Player.tscn" id="2_xlkp1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ud36n"]
+shading_mode = 0
+albedo_color = Color(0.20392157, 0.05490196, 0.003921569, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eim75"]
+shading_mode = 0
+albedo_color = Color(0, 0.19068867, 0.423988, 1)
+
+[sub_resource type="Resource" id="Resource_eim75"]
+script = ExtResource("2_ud36n")
+wall = 0
+offset = 2.0
+width = 1.2000000000000002
+has_door = false
+hole_height = 2.3
+id = "Cafe1"
+target_scene = "uid://cya442bcjma7h"
+target_id = "Corridor2"
+metadata/_custom_type_script = "uid://cssl3jdnm01cl"
+
+[node name="Node3D" type="Node3D" unique_id=1764819582]
+
+[node name="Room" parent="." unique_id=1257424196 instance=ExtResource("1_we05l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.031093955, 0, -0.037715197)
+room_depth = 5.0
+floor_material = SubResource("StandardMaterial3D_ud36n")
+wall_material = SubResource("StandardMaterial3D_eim75")
+openings = Array[ExtResource("2_ud36n")]([SubResource("Resource_eim75")])
+frame_color = Color(0, 0.04945931, 0.17631304, 1)
+
+[node name="Player" parent="." unique_id=1022299477 instance=ExtResource("2_xlkp1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8080614, 0, -2.2956316)

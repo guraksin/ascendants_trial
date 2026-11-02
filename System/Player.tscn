@@ -1,0 +1,150 @@
+[gd_scene format=3 uid="uid://bejpvsyoahd5d"]
+
+[ext_resource type="Script" uid="uid://caf8fic8y2rod" path="res://System/Game/Player.gd" id="1_3bfuq"]
+[ext_resource type="Texture2D" uid="uid://bwr3ascek4cg8" path="res://Groups/Group A/Yumika Valeireni/Move/Down/YumikaWalkDown2.png" id="2_84r1b"]
+[ext_resource type="Texture2D" uid="uid://dbedwe2ewtay0" path="res://Groups/Group A/Yumika Valeireni/Move/Left/YumikaWalkLeft2.png" id="3_uvsty"]
+[ext_resource type="Texture2D" uid="uid://cq5eqhnrgx6gf" path="res://Groups/Group A/Yumika Valeireni/Move/Right/YumikaRightWalk2.png" id="4_ngqag"]
+[ext_resource type="Texture2D" uid="uid://b13fmlmh4kfy4" path="res://Groups/Group A/Yumika Valeireni/Move/Up/UpWalk2.png" id="5_i8m40"]
+[ext_resource type="Texture2D" uid="uid://dke8i0kfoyxd4" path="res://Groups/Group A/Yumika Valeireni/Move/Down/YumikaWalkDown1.png" id="6_u3naa"]
+[ext_resource type="Texture2D" uid="uid://cravwc7ew4q37" path="res://Groups/Group A/Yumika Valeireni/Move/Down/YumikaWalkDown3.png" id="7_1en60"]
+[ext_resource type="Texture2D" uid="uid://dhuhkam8t68fu" path="res://Groups/Group A/Yumika Valeireni/Move/Down/YumikaWalkDown4.png" id="8_mrdev"]
+[ext_resource type="Texture2D" uid="uid://b6lb0rmm0mh84" path="res://Groups/Group A/Yumika Valeireni/Move/Left/YumikaWalkLeft1.png" id="9_8xh5d"]
+[ext_resource type="Texture2D" uid="uid://cg1psqy0nac3q" path="res://Groups/Group A/Yumika Valeireni/Move/Left/YumikaWalkLeft3.png" id="10_ewqae"]
+[ext_resource type="Texture2D" uid="uid://hr8c3etlisqg" path="res://Groups/Group A/Yumika Valeireni/Move/Left/YumikaWalkLeft4.png" id="11_vrru0"]
+[ext_resource type="Texture2D" uid="uid://fcvqlbpthxag" path="res://Groups/Group A/Yumika Valeireni/Move/Right/YumikaRightWalk1.png" id="12_webf5"]
+[ext_resource type="Texture2D" uid="uid://cr42wr858i72p" path="res://Groups/Group A/Yumika Valeireni/Move/Right/YumikaRightWalk3.png" id="13_34b28"]
+[ext_resource type="Texture2D" uid="uid://boalv1q6c5kls" path="res://Groups/Group A/Yumika Valeireni/Move/Right/YumikaRightWalk4.png" id="14_ol5i6"]
+[ext_resource type="Texture2D" uid="uid://bmhko7s1dq1bq" path="res://Groups/Group A/Yumika Valeireni/Move/Up/UpWalk1.png" id="15_jh5o5"]
+[ext_resource type="Texture2D" uid="uid://bhiap0mmwdurj" path="res://Groups/Group A/Yumika Valeireni/Move/Up/UpWalk3.png" id="16_8tvjv"]
+[ext_resource type="Texture2D" uid="uid://b63x2lu7ybib5" path="res://Groups/Group A/Yumika Valeireni/Move/Up/UpWalk4.png" id="17_k3rgw"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cr6d6"]
+radius = 0.3
+height = 1.6
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xrusg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_84r1b")
+}],
+"loop": 1,
+"name": &"idle_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_uvsty")
+}],
+"loop": 1,
+"name": &"idle_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ngqag")
+}],
+"loop": 1,
+"name": &"idle_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_i8m40")
+}],
+"loop": 1,
+"name": &"idle_up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_u3naa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_84r1b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_1en60")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_mrdev")
+}],
+"loop": 1,
+"name": &"walk_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_8xh5d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_uvsty")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ewqae")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_vrru0")
+}],
+"loop": 1,
+"name": &"walk_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_webf5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ngqag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_34b28")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ol5i6")
+}],
+"loop": 1,
+"name": &"walk_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_jh5o5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_i8m40")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_8tvjv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_k3rgw")
+}],
+"loop": 1,
+"name": &"walk_up",
+"speed": 5.0
+}]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4o3f6"]
+
+[node name="Player" type="CharacterBody3D" unique_id=1022299477 groups=["player"]]
+script = ExtResource("1_3bfuq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=853342439]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+shape = SubResource("CapsuleShape3D_cr6d6")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=227909954]
+transform = Transform3D(1, 0, 0, 0, 1.4, 0, 0, 0, 1, 0, 0.9, 0)
+pixel_size = 0.025
+alpha_cut = 1
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_xrusg")
+animation = &"idle_down"
+frame_progress = 0.19818592
+
+[node name="InteractZone" type="Area3D" parent="." unique_id=684803281]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8138434, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractZone" unique_id=152799221]
+shape = SubResource("BoxShape3D_4o3f6")
